@@ -127,10 +127,10 @@ namespace W5P_Resolution_Patcher
                 using (FileStream fileStream = new FileStream(gameLocation, FileMode.Open, FileAccess.ReadWrite))
                 {
                     byte[] buffer2 = new byte[6] { 233, 191, 40, 90, 0, 144 };
-                    fileStream.Position = 9706168;
+                    fileStream.Position = 9706168; // 0x9426B8
                     fileStream.Write(buffer2, 0, 6);
                     byte[] buffer3 = new byte[5] { 233, 214, 5, 90, 0 };
-                    fileStream.Position = 9715129;
+                    fileStream.Position = 9715129; // 0x9449B9
                     fileStream.Write(buffer3, 0, 5);
                     byte[] buffer4 = new byte[46]
                     {
@@ -140,23 +140,23 @@ namespace W5P_Resolution_Patcher
                     63, 243, 15, 89, 69, 216, 243, 15, 17, 69,
                     216, 233, 20, 250, 165, 255
                     };
-                    fileStream.Position = 15614844;
+                    fileStream.Position = 15614844; // 0xEE4F7C
                     fileStream.Write(buffer4, 0, 46);
                     byte[] bytes = BitConverter.GetBytes(Xres);
                     byte[] bytes2 = BitConverter.GetBytes(Yres);
                     BitConverter.GetBytes(Xres * 4);
                     BitConverter.GetBytes(Yres * 4);
-                    fileStream.Position = 2315563;
+                    fileStream.Position = 2315563; // 0x23612B
                     fileStream.Write(bytes, 0, 2);
-                    fileStream.Position = 2315569;
+                    fileStream.Position = 2315569; // 0x236131
                     fileStream.Write(bytes2, 0, 2);
-                    fileStream.Position = 12074411;
+                    fileStream.Position = 12074411; // 0xB849AB
                     fileStream.Write(bytes, 0, 2);
-                    fileStream.Position = 12074419;
+                    fileStream.Position = 12074419; // 0xB849B3
                     fileStream.Write(bytes2, 0, 2);
-                    fileStream.Position = 12072562;
+                    fileStream.Position = 12072562; // 0xB84272
                     fileStream.Write(bytes, 0, 2);
-                    fileStream.Position = 12072575;
+                    fileStream.Position = 12072575; // 0xB8427F
                     fileStream.Write(bytes2, 0, 2);
                     // Only 16:9
                     byte[] bytes3 = BitConverter.GetBytes(765f / (float)Yres);
@@ -166,19 +166,19 @@ namespace W5P_Resolution_Patcher
                         15, 17, 77, 180, 243, 15, 17, 69, 144, 243,
                         15, 17, 77, 148
                     };
-                    fileStream.Position = 1670846;
+                    fileStream.Position = 1670846; // 0x198ABE
                     byte[] buffer6 = new byte[4] { 171, 170, 226, 63 };
-                    fileStream.Position = 956777;
+                    fileStream.Position = 956777; // 0x0EA569
                     fileStream.Write(buffer6, 0, 4);
-                    fileStream.Position = 15614847;
+                    fileStream.Position = 15614847; // 0xEE4F7F
                     fileStream.Write(bytes3, 0, 4);
-                    fileStream.Position = 15614871;
+                    fileStream.Position = 15614871; // 0xEE4F97
                     fileStream.Write(bytes3, 0, 4);
-                    fileStream.Position = 9706109;
+                    fileStream.Position = 9706109; // 0x94267D
                     fileStream.Write(buffer5, 4, 5);
-                    fileStream.Position = 9711722;
+                    fileStream.Position = 9711722; // 0x943C6A
                     fileStream.Write(buffer5, 14, 5);
-                    fileStream.Position = 15614890;
+                    fileStream.Position = 15614890; // 0xEE4FAA
                     fileStream.Write(buffer, 0, 44);
                 }
                 MessageBox.Show("已应用修改", "", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
