@@ -48,9 +48,9 @@
             this.label_SelectGame.AutoSize = true;
             this.label_SelectGame.Location = new System.Drawing.Point(12, 9);
             this.label_SelectGame.Name = "label_SelectGame";
-            this.label_SelectGame.Size = new System.Drawing.Size(94, 17);
+            this.label_SelectGame.Size = new System.Drawing.Size(108, 17);
             this.label_SelectGame.TabIndex = 0;
-            this.label_SelectGame.Text = "选择wmn5r.exe";
+            this.label_SelectGame.Text = "Select wmn5r.exe";
             // 
             // textBox_GameLocation
             // 
@@ -66,7 +66,7 @@
             this.button_SelectGame.Name = "button_SelectGame";
             this.button_SelectGame.Size = new System.Drawing.Size(75, 23);
             this.button_SelectGame.TabIndex = 2;
-            this.button_SelectGame.Text = "选择...";
+            this.button_SelectGame.Text = "Select...";
             this.button_SelectGame.UseVisualStyleBackColor = true;
             this.button_SelectGame.Click += new System.EventHandler(this.button_SelectGame_Click);
             // 
@@ -83,7 +83,7 @@
             this.groupBox_ResChooseBox.Size = new System.Drawing.Size(312, 79);
             this.groupBox_ResChooseBox.TabIndex = 3;
             this.groupBox_ResChooseBox.TabStop = false;
-            this.groupBox_ResChooseBox.Text = "选择分辨率";
+            this.groupBox_ResChooseBox.Text = "Select resolution";
             // 
             // radioButton_3840_2160
             // 
@@ -143,19 +143,19 @@
             this.button_ApplyRes.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button_ApplyRes.Location = new System.Drawing.Point(15, 143);
             this.button_ApplyRes.Name = "button_ApplyRes";
-            this.button_ApplyRes.Size = new System.Drawing.Size(259, 30);
+            this.button_ApplyRes.Size = new System.Drawing.Size(243, 30);
             this.button_ApplyRes.TabIndex = 4;
-            this.button_ApplyRes.Text = "应用修改";
+            this.button_ApplyRes.Text = "Apply";
             this.button_ApplyRes.UseVisualStyleBackColor = true;
             this.button_ApplyRes.Click += new System.EventHandler(this.button_ApplyRes_Click);
             // 
             // button_About
             // 
-            this.button_About.Location = new System.Drawing.Point(280, 143);
+            this.button_About.Location = new System.Drawing.Point(264, 143);
             this.button_About.Name = "button_About";
-            this.button_About.Size = new System.Drawing.Size(47, 30);
+            this.button_About.Size = new System.Drawing.Size(63, 30);
             this.button_About.TabIndex = 5;
-            this.button_About.Text = "关于";
+            this.button_About.Text = "About";
             this.button_About.UseVisualStyleBackColor = true;
             this.button_About.Click += new System.EventHandler(this.button_About_Click);
             // 

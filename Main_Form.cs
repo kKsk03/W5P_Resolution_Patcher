@@ -15,14 +15,14 @@ namespace W5P_Resolution_Patcher
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "wmn5r.exe|wmn5r.exe";
-            openFileDialog.Title = "选择wmn5r.exe";
+            openFileDialog.Title = "Select wmn5r.exe";
             openFileDialog.InitialDirectory = @"C:\";
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string filePath = openFileDialog.FileName;
                 if (!validateGameFile(filePath))
                 {
-                    MessageBox.Show("请选择3.00.05版本的wmn5r.exe！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Please choose version 3.00.05 (Update 05) of wmn5r.exe!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 textBox_GameLocation.Text = filePath;
@@ -69,12 +69,12 @@ namespace W5P_Resolution_Patcher
         {
             if (string.IsNullOrEmpty(textBox_GameLocation.Text))
             {
-                MessageBox.Show("请先在上方选择wmn5r.exe！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please select wmn5r.exe above first!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             if (!File.Exists(textBox_GameLocation.Text))
             {
-                MessageBox.Show("您选择的路径下不存在wmn5r.exe！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("wmn5r.exe does not exist in the path you selected!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             short Xres = Convert.ToInt16("1360");
@@ -106,7 +106,7 @@ namespace W5P_Resolution_Patcher
             }
             else
             {
-                MessageBox.Show("请选择分辨率", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please select resolution", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -181,11 +181,11 @@ namespace W5P_Resolution_Patcher
                     fileStream.Position = 15614890; // 0xEE4FAA
                     fileStream.Write(buffer, 0, 44);
                 }
-                MessageBox.Show("已应用修改", "", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("Applied changes", "", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
             catch
             {
-                MessageBox.Show("无法读取或写入 wmn5r.exe，请关闭游戏并以管理员身份运行本程序", "错误", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                MessageBox.Show("Unable to read or write wmn5r.exe, please close the game and run this program as administrator", "Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
             }
         }
 
